@@ -53,11 +53,9 @@ COPY_USER_CONFIGURATION=1
 GRAPHIC="gnome"
 SET_SPACE_PASSWORD=1
 NEW_NONSPACE_PASSWORD="Will be overriden by 1) COPY_USER_CONFIGURATION 2) SET_SPACE_PASSWORD"
-DRACUT=0
 NETWORKMANAGER=1
 LOCALTIME="Europe/Monaco"
 NEWHOSTNAME="debianify"
-REFLECTOR=1
 GRAPHICS_DRIVER="all-open"
 SOUND_SERVER="no"
 FORCE_REBOOT_AFTER_INSTALLATION=1
@@ -83,7 +81,7 @@ pimp:$y$j9T$LuhFnrcezH0TUA1GaUqwa/$Ptme335MkS61UIlNQ.0jRD1doz7zQFzKIQcP6MXW6O1:1
 Debianify basically just doesn't care about your partition scheme. All mountpoints will be transferred to the new system. 
 
 ### LVM & LUKS
-It is supported, but if LVM or LUKS is detected, Debianify will use DRACUT to generate initramfs. However, hooks for apt will be installed, so DRACUT shouldn't be a big problem.
+It is supported. For older distributions, if LVM or LUKS is detected, Debianify will use DRACUT to generate initramfs.
 
 ### ZFS
 No, it is currently not supported.

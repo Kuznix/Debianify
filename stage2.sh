@@ -29,10 +29,6 @@ fi
 
 apt update
 
-if [ "$REFLECTOR" -eq 1 ]; then
-  echo "Using default mirrors"
-fi
-
 echo -e "\e[1m\e[41m\e[97mDESTROYING HOST SYSTEM IN 5 SECONDS\e[0m"
 
 for i in 5 4 3 2 1; do

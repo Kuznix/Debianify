@@ -41,14 +41,6 @@ fi
 
 rm -rf /boot/*
 
-# install DRACUT and tools for it
-if [ "$DRACUT" -eq 1  ]; then
-  echo -e "\e[1m\e[40m\e[93mINSTALLING DRACUT AND LVM2\e[0m"
-  apt install -y lvm2 mdadm dracut
-  
-  echo -e "\e[1m\e[40m\e[93mINSTALL KERNEL\e[0m"
-fi
-
 apt install -y linux-image-amd64
 
 if [[ $GRAPHICS_DRIVER != "no" ]]; then
